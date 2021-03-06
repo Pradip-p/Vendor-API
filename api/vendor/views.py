@@ -44,7 +44,7 @@ def  provinces_details(request,provinces_number):
 #### details of vendor
 
 
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 class VendorViewset(viewsets.ModelViewSet):
     
     def list(self, request):
@@ -133,7 +133,7 @@ class VendorViewset(viewsets.ModelViewSet):
 
 ### VendorBankDetails
 
- # @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 class VendorBankDetailsViewset(viewsets.ModelViewSet):
     
     def list(self, request):
@@ -227,7 +227,7 @@ class VendorBankDetailsViewset(viewsets.ModelViewSet):
 
 #### detailsof contact person
 
- # @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 class VenderContactPersonViewset(viewsets.ModelViewSet):
     
     def list(self, request):
