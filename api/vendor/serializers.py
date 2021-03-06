@@ -17,9 +17,10 @@ class VendorSerializers(serializers.ModelSerializer):
 		fields = '__all__'
 
 class VendorBankDetailsSerizers(serializers.ModelSerializer):
+	vendor = serializers.StringRelatedField()
 	class Meta:
 		model =  VendorBankDetails
-		fields = '__all__'
+		fields = ['id','name_of_branch','branch_address','type_of_account','vendor']
 
 class VenderContactPersonSerizers(serializers.ModelSerializer):
 	class Meta:

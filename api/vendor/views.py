@@ -44,7 +44,7 @@ def  provinces_details(request,provinces_number):
 #### details of vendor
 
 
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 class VendorViewset(viewsets.ModelViewSet):
     
     def list(self, request):
@@ -133,7 +133,7 @@ class VendorViewset(viewsets.ModelViewSet):
 
 ### VendorBankDetails
 
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 class VendorBankDetailsViewset(viewsets.ModelViewSet):
     
     def list(self, request):
@@ -158,6 +158,7 @@ class VendorBankDetailsViewset(viewsets.ModelViewSet):
         id = pk
         if id is not None:
             vendor = VendorBankDetails.objects.get(pk=id)
+            # vendor=Vendor.objects.all().prefetch_related().filter(pk=id)
             serializer_class = VendorBankDetailsSerizers(vendor)
             return Response(serializer_class.data)
         
@@ -227,7 +228,7 @@ class VendorBankDetailsViewset(viewsets.ModelViewSet):
 
 #### detailsof contact person
 
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 class VenderContactPersonViewset(viewsets.ModelViewSet):
     
     def list(self, request):
