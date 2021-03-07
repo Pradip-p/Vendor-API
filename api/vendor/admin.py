@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(Provinces)
 admin.site.register(VendorBankDetails)
 admin.site.register(Vendor)
+admin.site.register(VenderContactPerson)

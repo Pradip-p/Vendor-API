@@ -10,6 +10,7 @@ class ProvincesSerializers(serializers.ModelSerializer):
 
 class VendorSerializers(serializers.ModelSerializer):
 	"""docstring for ClassName"""
+	provinces = serializers.StringRelatedField()
 
 	class Meta():
 		"""docstring for ClassName"""
@@ -23,6 +24,7 @@ class VendorBankDetailsSerizers(serializers.ModelSerializer):
 		fields = ['id','name_of_branch','branch_address','type_of_account','vendor']
 
 class VenderContactPersonSerizers(serializers.ModelSerializer):
+	vendor = serializers.StringRelatedField()
 	class Meta:
 		model = VenderContactPerson
 		fields = '__all__'

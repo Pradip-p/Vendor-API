@@ -12,6 +12,7 @@ class Provinces(models.Model):
         return self.name
 
 class Vendor(models.Model):
+	provinces = models.ForeignKey(Provinces, on_delete=models.CASCADE)
 	vendor_id = models.CharField(max_length=20)
 	vendor_name = models.CharField(max_length=100)
 	address = models.CharField(max_length=100)
